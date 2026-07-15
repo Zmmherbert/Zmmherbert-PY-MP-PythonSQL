@@ -17,7 +17,7 @@ def create_dogs_table():
             name VARCHAR(20),
             breed VARCHAR(20),
             age INTEGER
-        )
+        );
     ''')
 
 
@@ -26,7 +26,7 @@ def create_dogs_table():
 def insert_dog(name, breed, age):
 
     cursor.execute(f'''
-        INSERT INTO dogs (name, breed, age) VALUES ({name}, {breed}, {age})
+        INSERT INTO dogs (name, breed, age) VALUES ({name}, {breed}, {age});
     ''')
 
 
