@@ -13,9 +13,9 @@ cursor = conn.cursor()
 def create_dogs_table():
     cursor.execute('''
         CREATE TABLE dogs(
-        ID integer autoincrement
+            ID INTEGER PRIMARY KEY AUTOINCREMENT
         )
-        ''')
+    ''')
 
 
 
