@@ -13,7 +13,10 @@ cursor = conn.cursor()
 def create_dogs_table():
     cursor.execute('''
         CREATE TABLE dogs(
-            ID INTEGER PRIMARY KEY AUTOINCREMENT
+            ID INTEGER PRIMARY KEY AUTOINCREMENT,
+            name VARCHAR(20),
+            breed VARCHAR(20),
+            age INTEGER
         )
     ''')
 
@@ -22,11 +25,13 @@ def create_dogs_table():
 # TODO: Complete insert_dog() by inserting a new dog (provided in the parameters) into the "dogs" table.
 def insert_dog(name, breed, age):
 
-    """TODO"""
+    cursor.execute('''
+        INSERT INTO dogs (name, breed, age) VALUES ({name}, {breed}, {age})
+    ''')
 
 
 # TODO: Complete select_all_dogs() by selecting all rows from the "dogs" table *and returning them*.
 def select_all_dogs():
 
     # return the rows
-    return """TODO"""
+    return cursor.execute('''SELECT dogs''')
