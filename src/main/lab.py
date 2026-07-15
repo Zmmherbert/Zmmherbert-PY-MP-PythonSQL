@@ -34,7 +34,7 @@ def insert_dog(name, breed, age):
 def select_all_dogs():
 
     # return the rows
-    return cursor.execute('''SELECT dogs''')
+    return cursor.execute('''SELECT TABLE dogs''')
 
 if __name__ == '__main__':
     insert_dog('Mister', 'Foxhound', 5)
