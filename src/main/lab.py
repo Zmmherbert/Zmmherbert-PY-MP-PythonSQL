@@ -5,14 +5,18 @@ as well as creating a table, inserting data, and selecting that data.
 import sqlite3
 
 
-conn = "TODO: Create a database connection"
-cursor = "TODO: create a cursor with the connection"
+conn = sqlite3.connect('db')
+cursor = conn.cursor()
 
 
 # Create a dogs table with autoincrementing ID
 def create_dogs_table():
+    cursor.execute('''
+        CREATE TABLE dogs(
+        ID integer autoincrement
+        )
+        ''')
 
-    """TODO"""
 
 
 # TODO: Complete insert_dog() by inserting a new dog (provided in the parameters) into the "dogs" table.
