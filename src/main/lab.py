@@ -5,7 +5,7 @@ as well as creating a table, inserting data, and selecting that data.
 import sqlite3
 
 
-conn = sqlite3.connect('db')
+conn = sqlite3.connect(':memory:')
 cursor = conn.cursor()
 
 
